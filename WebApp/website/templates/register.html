@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strona rejestracji</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <h1>Rejestracja</h1>
+    <form method="POST" action="/register">
+        <div class="input-container">
+            <label for="email">Adres email:</label>
+            <input type="email" id="email1" name="email1">
+        </div>
+        <div class="input-container">
+            <label for="email">Powtórz adres email:</label>
+            <input type="email" id="email2" name="email2">
+        </div>
+        <div class="input-container">
+            <label for="password" id="password1-label">Hasło:</label>
+            <div class="password-container">
+                <input type="password" id="password1" name="password1">
+                <img src="../static/images/eye.svg" alt="Eye icon" class="eye-icon" onclick="togglePassword('password1')">
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="password" id="password2-label">Powtórz hasło:</label>
+            <div class="password-container">
+                <input type="password" id="password2" name="password2">
+                <img src="../static/images/eye.svg" alt="Eye icon" class="eye-icon" onclick="togglePassword('password2')">
+            </div>
+        </div>
+        <br>
+        <input type="submit" value="Zarejestruj">
+    </form>
+    <a href="login.html">Powrót do strony logowania</a>
+    <script src="../static/js/registereye.js"></script>
+</body>
+</html>
