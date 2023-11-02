@@ -1,28 +1,28 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
-%}
-<form method="POST">
-  <h3 align="center">LOGOWANIE</h3>
-  <div class="form-group">
-    <label for="email">Adres e-mail</label>
-    <input
-      type="email"
-      class="form-control"
-      id="email"
-      name="email"
-      placeholder="Wprowadź e-mail"
-    />
-  </div>
-  <div class="form-group">
-    <label for="password">Hasło</label>
-    <input
-      type="password"
-      class="form-control"
-      id="password"
-      name="password"
-      placeholder="Wprowadź hasło"
-    />
-  </div>
-  <br />
-  <button type="submit" class="btn btn-primary">Zaloguj się</button>
-</form>
-{% endblock %}
+<!-- HTML -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strona logowania</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <h1>Logowanie</h1>
+    <form method="POST" action="/login">
+        <div class="input-container">
+            <label for="email">Adres email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="input-container">
+            <label for="password" id="password-label">Hasło:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password">
+                <img src="../static/images/eye.svg" alt="Eye icon" class="eye-icon" onclick="togglePassword()">
+            </div>        
+        </div>
+        <br>
+        <input type="submit" class="login-button" value="Zaloguj">
+    </form>
+    <a href="register.html">Nie masz konta? Zarejestruj się!</a>
+    <script src="../static/js/eye.js"></script>
+</body>
+</html>
