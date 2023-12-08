@@ -1,4 +1,3 @@
-// Funkcja do zmiany statusu dla danego urządzenia
 function changeStatus(endpoint, containerId, className, text, color) {
     const statusElement = document.getElementById(containerId);
     statusElement.innerHTML = `Urządzenie <span class="${className}" style="color: ${color}">${text}</span>`;
@@ -15,13 +14,11 @@ function changeStatus(endpoint, containerId, className, text, color) {
         });
 }
 
-// Funkcja do zapisu statusu w pamięci sessionStorage
 function saveStatus(containerId, text, color) {
     sessionStorage.setItem(`${containerId}_status`, text);
     sessionStorage.setItem(`${containerId}_color`, color);
 }
 
-// Funkcja do odczytu i ustawienia statusu z pamięci sessionStorage
 function setStatusFromStorage(containerId) {
     const storedText = sessionStorage.getItem(`${containerId}_status`);
     const storedColor = sessionStorage.getItem(`${containerId}_color`);
